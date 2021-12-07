@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">com.fiberchat.fiberchat</string>
+
+  <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>
+

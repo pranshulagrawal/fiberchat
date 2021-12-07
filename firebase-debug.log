@@ -1,0 +1,106 @@
+[debug] [2021-11-24T08:01:13.068Z] ----------------------------------------------------------------------
+[debug] [2021-11-24T08:01:13.070Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2021-11-24T08:01:13.071Z] CLI Version:   9.19.0
+[debug] [2021-11-24T08:01:13.071Z] Platform:      darwin
+[debug] [2021-11-24T08:01:13.071Z] Node Version:  v14.18.0
+[debug] [2021-11-24T08:01:13.074Z] Time:          Wed Nov 24 2021 13:31:13 GMT+0530 (India Standard Time)
+[debug] [2021-11-24T08:01:13.074Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-24T08:01:13.078Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-11-24T08:01:13.142Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-24T08:01:13.142Z] > authorizing via signed-in user (tctechdevelopers@gmail.com)
+[debug] [2021-11-24T08:01:13.143Z] [iam] checking project fiberchat-f166f for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2021-11-24T08:01:13.144Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-24T08:01:13.145Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-24T08:01:43.156Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-11-24T08:01:43.158Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-24T08:01:43.158Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-24T08:02:13.172Z] [functions] service account IAM check errored, deploy may fail: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci {"name":"FirebaseError","children":[],"exit":1,"message":"Authentication Error: Your credentials are no longer valid. Please run \u001b[1mfirebase login --reauth\u001b[22m\n\nFor CI servers and headless environments, generate a new token with \u001b[1mfirebase login:ci\u001b[22m","status":500}
+[info] 
+[info] === Deploying to 'fiberchat-f166f'...
+[info] 
+[info] i  deploying functions 
+[debug] [2021-11-24T08:02:13.187Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2021-11-24T08:02:35.746Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.15.7"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2021-11-24T08:02:35.746Z] Building nodejs source
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2021-11-24T08:02:35.747Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-24T08:02:35.747Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-24T08:02:35.748Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-24T08:02:35.748Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2021-11-24T08:02:35.749Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-24T08:02:35.749Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-24T08:02:36.008Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 24 Nov 2021 08:02:36 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:36.059Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/fiberchat-f166f/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2021-11-24T08:02:36.064Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Wed, 24 Nov 2021 08:02:36 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:36.106Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/fiberchat-f166f/services/cloudbuild.googleapis.com  
+ 
+[debug] [2021-11-24T08:02:36.108Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Wed, 24 Nov 2021 08:02:36 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:36.152Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/fiberchat-f166f/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2021-11-24T08:02:37.985Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:38.161Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2021-11-24T08:02:38.184Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2021-11-24T08:02:38.186Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fiberchat-f166f/adminSdkConfig  
+ 
+[debug] [2021-11-24T08:02:38.803Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:38.806Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/fiberchat-f166f/configs  
+ 
+[debug] [2021-11-24T08:02:39.570Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:39.574Z] Analyzing nodejs backend spec
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged functions (25.47 KB) for uploading 
+[debug] [2021-11-24T08:02:39.881Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/fiberchat-f166f/locations/-/functions  
+ 
+[debug] [2021-11-24T08:02:40.897Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:40.903Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/fiberchat-f166f/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2021-11-24T08:02:41.975Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 24 Nov 2021 08:02:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-24T08:02:41.980Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-2d627d7d-421b-4212-9946-8c9e74b48ca7/a395672a-457f-483a-88af-562847898e86.zip?GoogleAccessId=service-515890300919@gcf-admin-robot.iam.gserviceaccount.com&Expires=1637742761&Signature=Ovrph%2BlLsCOHiE6lJWoYh08f3%2BPWOVlYV4ZuU7slwrukv5C6tUW7BPkCPIqE0TAaDO%2BBBehVdHI2HF3vwqmpOilhOgMrDoZhINU0ZBLiqQEvrOTuQc0qFIYSCnc3XHfYAYJTOJ4R6UYxGLoOZpTsIIBnFIjRg9VnoLM4OFe%2FvrnatI5Fj0iP1vEE0OYOeIUwftBWATNc4z%2Fqwpu0XhfMSxWawameuFleaxaYXSDxERpZkp9Bfq0mvX67Sl74tKaPiNK85G1yHm6hFRT0idMYfOxfpXldumsxuVaa5pV7yAB%2Bh7ZA8UJ7H3nQ9munlxWLzK1gAJ5e7Mp2zV9rmFIHMw%3D%3D  
+ <request body omitted>
+[debug] [2021-11-24T08:02:43.099Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ADPycdt6kz97iEFHvY8YyydMfRda4akPF8XcdTNEA3SF6hZF391brewZtoSfbVDsXxLNjK9BKGJh7WTs94Hvae5szpoRy7UwWw","etag":"\"d549a91b880cb6255f01cd63e8893d14\"","x-goog-generation":"1637740962985121","x-goog-metageneration":"1","x-goog-hash":"crc32c=Xg74+w==, md5=1UmpG4gMtiVfAc1j6Ik9FA==","x-goog-stored-content-length":"26081","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Wed, 24 Nov 2021 08:02:43 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] ✔  functions: functions folder uploaded successfully 
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	allAdminNotification(us-central1)
+	allUsersNotification(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
