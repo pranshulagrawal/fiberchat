@@ -1,3 +1,2 @@
-# fiberchat
 
-© Copyrighted by Thinkcreative_Technologies. An Exclusive item of Envato market. Make sure you have purchased a Regular License OR Extended license for the Source Code from Envato to use this product. See the License Defination attached with source code.
+![Demo Screen](https://github.com/pranshulagrawal/fiberchat/blob/master/Screenshot/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6669626572636861742d66313636662e61707073706f742e636f6d2f6f2f67726170686963732532467472616e736c6174696f6e2d6d696e2e6a7065673f616c7.jpg)
